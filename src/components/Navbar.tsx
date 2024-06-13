@@ -1,5 +1,15 @@
 import Logo from "../assets/yellow-sofa.png";
 
+let age: number = 100;
+let firstName: string = "Angela";
+let busy: boolean = true;
+
+console.log(`
+  ${age}
+   ${firstName}
+    ${busy}
+  `);
+
 export const Navbar = () => {
   return (
     <div className="w-full bg-white sticky flex justify-between items-center shadow-md shadow-gray-500">
