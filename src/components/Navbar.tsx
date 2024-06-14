@@ -19,7 +19,7 @@ export const Navbar = () => {
 
       <div className="m-5">
         <h1 className="text-xl text-blue-700">
-          Welcome back
+          Welcome back {firstName}
           <span id="returning-user"></span>
           <span id="user"></span>
         </h1>
