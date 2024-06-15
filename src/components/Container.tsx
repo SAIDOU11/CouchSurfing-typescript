@@ -23,6 +23,20 @@ const reviews = [
   },
 ];
 
+const you: {
+  firstName: string;
+  lastName: string;
+  isReturning: boolean;
+  age: number;
+} = {
+  firstName: "Bobby",
+  lastName: "Brown",
+  isReturning: true,
+  age: 23,
+};
+
+console.log(you.age);
+
 export const Container = () => {
   return (
     <div className="my-5 flex flex-col items-center">
