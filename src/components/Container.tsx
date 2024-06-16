@@ -28,14 +28,16 @@ const you: {
   lastName: string;
   isReturning: boolean;
   age: number;
+  stayedAt: string[];
 } = {
   firstName: "Bobby",
   lastName: "Brown",
   isReturning: true,
   age: 23,
+  stayedAt: ["Florida-home", "Oman-flat", "Tokyo-bungalow"],
 };
 
-console.log(you.age);
+console.log(you.stayedAt[1]);
 
 export const Container = () => {
   return (
