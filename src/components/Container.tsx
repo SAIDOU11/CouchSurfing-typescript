@@ -46,8 +46,12 @@ console.log(you.firstName);
 
 export const Container = () => {
   return (
-    <div className="my-5 flex flex-col items-center">
-      <img src={Vacation} alt="" className="w-full" />
+    <div className="m-5 flex flex-col items-center sm:m-8 lg:m-12">
+      <img
+        src={Vacation}
+        alt=""
+        className="w-full sm:max-w-[850px] min-h-[400px] max-h-[600px] "
+      />
       <h2 className="text-xl text-blue-600 m-4">
         reviews total {reviews.length} | last reviewed by {reviews[0].name} ⭐
       </h2>
