@@ -2,7 +2,12 @@ import Vacation from "../assets/Colombia.jpg";
 
 // const reviewTotalDisplay = document.querySelector("#reviews");
 
-const reviews = [
+const reviews: {
+  name: string;
+  stars: number;
+  loyaltyUser: boolean;
+  date: string;
+}[] = [
   {
     name: "Andrea",
     stars: 5,
@@ -31,13 +36,13 @@ const you: {
   stayedAt: string[];
 } = {
   firstName: "Bobby",
-  lastName: "Brown",
+  lastName: "Goren",
   isReturning: true,
-  age: 23,
-  stayedAt: ["Florida-home", "Oman-flat", "Tokyo-bungalow"],
+  age: 42,
+  stayedAt: ["Florida Home", "Oman Flat", "Tokyo Bungalow"],
 };
 
-console.log(you.stayedAt[1]);
+console.log(you.firstName);
 
 export const Container = () => {
   return (
