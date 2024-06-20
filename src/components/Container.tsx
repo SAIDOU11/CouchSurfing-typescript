@@ -28,6 +28,8 @@ const reviews: {
   },
 ];
 
+// const properties
+
 const you: {
   firstName: string;
   lastName: string;
