@@ -1,4 +1,7 @@
 import Vacation from "../assets/Colombia.jpg";
+import Img1 from "../assets/Colombia.jpg";
+import Img2 from "../assets/London-UK.jpg";
+import Img3 from "../assets/Poland-Lipowa.jpg";
 
 // const reviewTotalDisplay = document.querySelector("#reviews");
 
@@ -28,8 +31,6 @@ const reviews: {
   },
 ];
 
-// const properties
-
 const you: {
   firstName: string;
   lastName: string;
@@ -45,6 +46,62 @@ const you: {
 };
 
 console.log(you.firstName);
+
+const properties: {
+  image: string;
+  title: string;
+  price: number;
+  location: {
+    firstLine: string;
+    city: string;
+    code: number;
+    country: string;
+  };
+  contact: string;
+  isAvailable: boolean;
+}[] = [
+  {
+    image: Img1,
+    title: "Colombian Shack",
+    price: 45,
+    location: {
+      firstLine: "Schack 37",
+      city: "Bogota",
+      code: 45623,
+      country: "Colombia",
+    },
+    contact: "colombian@mail.com",
+    isAvailable: true,
+  },
+  {
+    image: Img2,
+    title: "Polish Cottage",
+    price: 34,
+    location: {
+      firstLine: "No 33",
+      city: "Gdansk",
+      code: 34664,
+      country: "Poland",
+    },
+    contact: "poland@mail.com",
+    isAvailable: false,
+  },
+  {
+    image: Img3,
+    title: "london Flat",
+    price: 45,
+    location: {
+      firstLine: "Flat 15",
+      city: "London",
+      code: 45623,
+      country: "United Kingdom",
+    },
+    contact: "london@mail.com",
+    isAvailable: true,
+  },
+];
+
+console.log(properties);
 
 export const Container = () => {
   return (
