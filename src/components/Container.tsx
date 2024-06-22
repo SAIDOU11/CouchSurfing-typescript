@@ -88,7 +88,7 @@ const properties: {
   },
   {
     image: Img3,
-    title: "london Flat",
+    title: "London Flat",
     price: 45,
     location: {
       firstLine: "Flat 15",
@@ -118,9 +118,35 @@ export const Container = () => {
         Get reviews
       </button>
       <div className="w-11/12 h-[1px] bg-red-400"></div>
-      <h3 className="text-lg text-blue-600">
+      <h3 className="text-lg text-blue-600 mt-4">
         Other Properties recommended to you:
       </h3>
+      <div className="flex flex-wrap">
+        <div className="text-center text-blue-600">
+          <img
+            src={Img1}
+            alt=""
+            className="w-[300px] h-[280px] m-2 rounded-2xl p-2 shadow-md "
+          />
+          <h1 className="text-xl">{properties[0].title} </h1>
+        </div>
+        <div className="text-center text-blue-600">
+          <img
+            src={Img3}
+            alt=""
+            className="w-[300px] h-[280px] m-2 rounded-2xl p-2 shadow-md "
+          />
+          <h1 className="text-xl">{properties[1].title} </h1>
+        </div>
+        <div className="text-center text-blue-600">
+          <img
+            src={Img2}
+            alt=""
+            className="w-[300px] h-[280px] m-2 rounded-2xl p-2 shadow-md "
+          />
+          <h1 className="text-xl">{properties[2].title} </h1>
+        </div>
+      </div>
     </div>
   );
 };
