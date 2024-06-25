@@ -5,41 +5,48 @@ import Img3 from "../assets/Poland-Lipowa.jpg";
 
 // const reviewTotalDisplay = document.querySelector("#reviews");
 
+enum Permissions {
+  ADMIN = "admin",
+  READ_ONLY = "read-only",
+}
+
+enum Loyalty {
+  GOLD_USER = "GOLD_USER",
+  SILVER_USER = "SILVER_USER",
+  BRONZE_USER = "BRONZE_USER",
+}
+
 const reviews: {
   name: string;
   stars: number;
-  loyaltyUser: boolean;
+  loyaltyUser: Loyalty;
   date: string;
 }[] = [
   {
     name: "Andrea",
     stars: 5,
-    loyaltyUser: true,
+    loyaltyUser: Loyalty.GOLD_USER,
     date: "01-04-2024",
   },
   {
     name: "Sergei",
     stars: 3,
-    loyaltyUser: false,
+    loyaltyUser: Loyalty.BRONZE_USER,
     date: "28-03-2024",
   },
   {
     name: "Omar",
     stars: 4,
-    loyaltyUser: true,
+    loyaltyUser: Loyalty.SILVER_USER,
     date: "27-03-2024",
   },
 ];
 
-const you: {
-  firstName: string;
-  lastName: string;
-  isReturning: boolean;
-  age: number;
-  stayedAt: string[];
-} = {
+// User
+const you = {
   firstName: "Bobby",
   lastName: "Goren",
+  permissions: Permissions.ADMIN,
   isReturning: true,
   age: 42,
   stayedAt: ["Florida Home", "Oman Flat", "Tokyo Bungalow"],
