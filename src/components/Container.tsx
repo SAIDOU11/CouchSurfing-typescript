@@ -2,47 +2,48 @@ import Vacation from "../assets/Colombia.jpg";
 import Img1 from "../assets/Colombia.jpg";
 import Img2 from "../assets/London-UK.jpg";
 import Img3 from "../assets/Poland-Lipowa.jpg";
+import { Permissions, LoyaltyUser } from "../enums.tsx";
 
 // const reviewTotalDisplay = document.querySelector("#reviews");
 
-enum Permissions {
-  ADMIN = "admin",
-  READ_ONLY = "read-only",
-}
-
-enum Loyalty {
-  GOLD_USER = "GOLD_USER",
-  SILVER_USER = "SILVER_USER",
-  BRONZE_USER = "BRONZE_USER",
-}
-
-const reviews: {
-  name: string;
-  stars: number;
-  loyaltyUser: Loyalty;
-  date: string;
-}[] = [
+const reviews: any[] = [
   {
     name: "Andrea",
     stars: 5,
-    loyaltyUser: Loyalty.GOLD_USER,
+    loyaltyUser: LoyaltyUser.GOLD_USER,
     date: "01-04-2024",
   },
   {
     name: "Sergei",
     stars: 3,
-    loyaltyUser: Loyalty.BRONZE_USER,
+    loyaltyUser: LoyaltyUser.BRONZE_USER,
     date: "28-03-2024",
   },
   {
     name: "Omar",
     stars: 4,
-    loyaltyUser: Loyalty.SILVER_USER,
+    loyaltyUser: LoyaltyUser.SILVER_USER,
     date: "27-03-2024",
+    description: "The place is amazing, I love it.",
   },
 ];
 
 // User
+// const you: {
+//   firstName: string;
+//   lastName: string;
+//   isReturning: boolean;
+// permissions: string;
+//   age: number;
+//   stayedAt: string[];
+// } = {
+//   firstName: "Bobby",
+//   lastName: "Goren",
+//   isReturning: true,
+//   age: 42,
+//   stayedAt: ["Florida Home", "Oman Flat", "Tokyo Bungalow"],
+// };
+
 const you = {
   firstName: "Bobby",
   lastName: "Goren",
@@ -52,7 +53,7 @@ const you = {
   stayedAt: ["Florida Home", "Oman Flat", "Tokyo Bungalow"],
 };
 
-console.log(you.firstName);
+console.log(you.permissions);
 
 const properties: {
   image: string;
