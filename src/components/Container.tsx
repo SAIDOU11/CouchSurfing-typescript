@@ -3,6 +3,7 @@ import Img1 from "../assets/Colombia.jpg";
 import Img2 from "../assets/London-UK.jpg";
 import Img3 from "../assets/Poland-Lipowa.jpg";
 import { Permissions, LoyaltyUser } from "../enums.tsx";
+import { Price, Country } from "../type.tsx";
 
 // const reviewTotalDisplay = document.querySelector("#reviews");
 
@@ -28,22 +29,6 @@ const reviews: any[] = [
   },
 ];
 
-// User
-// const you: {
-//   firstName: string;
-//   lastName: string;
-//   isReturning: boolean;
-// permissions: string;
-//   age: number;
-//   stayedAt: string[];
-// } = {
-//   firstName: "Bobby",
-//   lastName: "Goren",
-//   isReturning: true,
-//   age: 42,
-//   stayedAt: ["Florida Home", "Oman Flat", "Tokyo Bungalow"],
-// };
-
 const you = {
   firstName: "Bobby",
   lastName: "Goren",
@@ -58,12 +43,12 @@ console.log(you.permissions);
 const properties: {
   image: string;
   title: string;
-  price: number;
+  price: Price;
   location: {
     firstLine: string;
     city: string;
     code: number;
-    country: string;
+    country: Country;
   };
   contact: string;
   isAvailable: boolean;
@@ -84,7 +69,7 @@ const properties: {
   {
     image: Img2,
     title: "Polish Cottage",
-    price: 34,
+    price: 30,
     location: {
       firstLine: "No 33",
       city: "Gdansk",
@@ -130,29 +115,32 @@ export const Container = () => {
         Other Properties recommended to you:
       </h3>
       <div className="flex flex-wrap">
-        <div className="text-center text-blue-600">
+        <div className="text-center text-blue-600 rounded-md m-5 shadow-md">
           <img
             src={Img1}
             alt=""
-            className="w-[300px] h-[280px] m-2 rounded-2xl p-2 shadow-md "
+            className="w-[300px] h-[280px] m-2 rounded-2xl p-2  "
           />
           <h1 className="text-xl">{properties[0].title} </h1>
+          <p className="text-black">{properties[0].price}$ / night</p>
         </div>
-        <div className="text-center text-blue-600">
+        <div className="text-center text-blue-600 rounded-md m-5 shadow-md">
           <img
             src={Img3}
             alt=""
             className="w-[300px] h-[280px] m-2 rounded-2xl p-2 shadow-md "
           />
           <h1 className="text-xl">{properties[1].title} </h1>
+          <p className="text-black">{properties[1].price}$ / night</p>
         </div>
-        <div className="text-center text-blue-600">
+        <div className="text-center text-blue-600 rounded-md m-5 shadow-md">
           <img
             src={Img2}
             alt=""
             className="w-[300px] h-[280px] m-2 rounded-2xl p-2 shadow-md "
           />
           <h1 className="text-xl">{properties[2].title} </h1>
+          <p className="text-black">{properties[2].price}$ / night</p>
         </div>
       </div>
     </div>
